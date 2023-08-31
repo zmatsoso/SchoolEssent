@@ -1,0 +1,71 @@
+@charset "utf-8";
+.new_role {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #09F;
+}
+._headings {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #000;
+}
+._fields {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #999;
+}
+._profavailable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #000;
+}
+._cancel_btn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: #C90;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+._white_suppliers {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #FFF;
+	font-weight: bolder;
+}
+
+._save_btn {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: #0C0;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+._next_btn {
+	font-size: 14px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-transform: capitalize;
+	color: #06C;
+	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+}
+._table_boda {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	border: thin solid #39F;
+}
+
+._all_text {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bolder;
+	color: #666;
+}

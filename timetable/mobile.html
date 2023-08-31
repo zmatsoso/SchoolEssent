@@ -1,0 +1,514 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>School Essentials</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="shortcut icon" href="demo/favicon.ico" type="image/x-icon" />
+	<style type="text/css">
+		div.demo {
+			border-bottom: 1px dotted gray;
+			margin-bottom: 2em;
+		}
+		input {
+			margin: 2em 0;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="includes/style1.css">
+
+
+<script src="external/jquery-1.6.4.min.js" type="text/javascript"></script>	
+
+	<link rel="stylesheet" href="external/jquery.mobile-1.3.0.min.css" />
+	<link href="css/mobipick.css" rel="stylesheet" type="text/css" />
+	<link href="demo/shCoreDefault.css" rel="stylesheet" type="text/css" />
+	<link href="demo/shThemeDefault.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="demo/shCore.js"></script>
+	<script type="text/javascript" src="demo/shBrushJScript.js"></script>
+	<script type="text/javascript" src="demo/shBrushXml.js"></script>
+	<script type="text/javascript" src="external/modernizr.custom.min.js"></script>
+	<script type="text/javascript" src="external/xdate.js"></script>
+	<script type="text/javascript" src="external/xdate.i18n.js"></script>
+	<script type="text/javascript" src="external/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="external/jquery.mobile-1.3.0.min.js"></script>
+	<script type="text/javascript" src="js/mobipick.js"></script>
+	<script type="text/javascript">
+		$( document ).on( "pagecreate", "#advanceddemo", function() {
+			SyntaxHighlighter.all();
+
+			$( "input.mobipick-demo-default-date", this ).mobipick();
+
+			$( "input.mobipick-demo-spanish", this ).mobipick({
+				locale: "es"
+			});
+
+			$( "input.mobipick-demo-min-max-date", this ).mobipick();
+
+			$( "input.mobipick-accuracy-month", this ).mobipick({
+				accuracy: "month"
+			});
+
+			$( "input.mobipick-accuracy-year", this ).mobipick({
+				accuracy: "year"
+			});
+
+			$( "input.mobipick-accuracy-year-min-max-date", this ).mobipick({
+				accuracy: "year"
+			});
+			var mpFrom = $( "input.mobipick-range-date-min", this ).mobipick();
+			var mpTo   = $( "input.mobipick-range-date-max", this ).mobipick();
+			mpFrom.on( "change", function() {
+				mpTo.mobipick( "option", "minDate", mpFrom.mobipick( "option", "date" ) );
+			});
+			mpTo.on( "change", function() {
+				mpFrom.mobipick( "option", "maxDate", mpTo.mobipick( "option", "date" ) );
+			});
+			$( "input.mobipick-human-readable" ).mobipick({
+				intlStdDate: false
+			});
+
+			$( "input.mobipick-date-min-dynamic" ).mobipick({
+				minDate: (new XDate()).addDays( 4 )
+			});
+			var pickerWithReset = $( "input.mobipick-reset" ).mobipick();
+			$( "a.reset" ).on( "tap", function() {
+				pickerWithReset.mobipick("option", "date", null).mobipick("updateDateInput");
+			});
+
+			$( "input.mobipick-mm-dd-yyyy" ).mobipick({
+				dateFormat: "MM-dd-yyyy"
+			});
+
+            var buttonPicker = $( "input.mobipick-programmatically", this ).mobipick();
+            $( "button.mobipick-programmatically", this ).on( "tap click", function() {
+                buttonPicker.trigger( "click" );
+            });
+            buttonPicker.on( "change", function() {
+                // use the date after confirmation
+                window.alert( buttonPicker.mobipick( "option", "date" ) );
+                // or alternatively
+                // window.alert( buttonPicker.mobipick( "dateString" ) );
+                // window.alert( buttonPicker.mobipick( "localeString" ) );
+            })
+
+        });
+	</script>
+</head>
+<body> 
+
+
+<div data-role="page" id="page" >
+<div data-role="header" data-theme="d"><img src="images/nu_logo.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+ <h2>TECHNOLOGY behind serious schools</h2>  <br> 
+ 		<ul id="main_menu" data-role="listview" class="mainmenu"></ul>
+      </div>
+
+</div>
+
+
+
+<div data-role="page" id="calc" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+	<div data-role="content" class="footerSpace">	
+    <div id="first_heading20" align="centre" class="bana">Cost Calculator</div><br>
+<a href="#products" id="products" data-role="button" data-inline="false" class="mapIt" >View Product Options</a> </br>
+
+<div class="cava">Product Option
+<div data-role="fieldcontain">
+  <select name="product_type" id="product_type">
+    <option value="0">Select Option</option>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+   </select>
+</div>
+</div>
+
+<div class="cava">School Type
+<div data-role="fieldcontain">
+  <select name="school_type" id="school_type">
+     <option value="1">Ordinary School</option>
+    <option value="2">Boarding School</option>
+    <option value="3">Early childhood</option>
+    <option value="4">Special needs</option>
+  </select>
+</div>
+</div>
+
+<div class="cava">Data source
+<div data-role="fieldcontain">
+  <select name="data_source" id="data_source">
+    <option value="0">Select Source</option>
+    <option value="1">EdusolSAMS</option>
+    <option value="2">Allocation/Classification</option>
+	<option value="3">Other</option>
+    </select>
+</div>
+</div>
+
+<div class="cava"><div id="the_number">Number of educators</div>
+  <div data-role="fieldcontain">
+       <input type="text" name="no_educs" id="no_educs" value=""  />
+  </div>
+
+</div>
+
+
+		
+		<a href="#map" id="calc_price" data-role="button" data-inline="false" class="mapIt" >Calculate</a>
+
+	</div>
+	
+	<div data-role="content" class="footerSpace">	
+    <div id="first_heading20" align="centre" class="bana">Order Information</div><br>
+	
+<div class="cava">Request
+<div data-role="fieldcontain">
+  <select name="request" id="request">
+    <option value="0">Order above product</option>
+    <option value="1">Need more info</option>
+    <option value="2">Come present at school</option>
+    </select>
+</div>
+</div>
+
+<div class="cava">School Name
+  <div data-role="fieldcontain">
+       <input type="text" name="ord_school_name" id="ord_school_name" value=""  />
+  </div>
+</div>
+
+<div class="cava">School Emis
+  <div data-role="fieldcontain">
+       <input type="text" name="ord_emis" id="ord_emis" value=""  />
+  </div>
+</div>
+
+<div class="cava">Name of requester
+  <div data-role="fieldcontain">
+       <input type="text" name="ord_requester_name" id="ord_requester_name" value=""  />
+  </div>
+</div>
+
+<div class="cava">Requester phone no
+  <div data-role="fieldcontain">
+       <input type="text" name="ord_requester_no" id="ord_requester_no" value=""  />
+  </div>
+</div>
+		<a href="#" data-role="button" id="sent_order" data-inline="false">Submit</a>
+	</div>
+	
+	
+	<div data-role="content" class="footerSpace">	
+    <div id="first_heading20" align="centre" class="bana">Contact Information</div><br>
+	
+
+
+
+<div class="cava">
+email: timetables@schoolessentials.co.za<br>
+fax: 0865518979<br>
+tel: 083 967 6664<br>
+</div>
+		<a href="tel://0839676664" data-role="button" id="sent_order" data-inline="false">Call Now</a>
+	</div>
+
+	
+</div>
+
+
+<div data-role="page" id="sample_profiles" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+	 <h2>Select a profile</h2>  <br>
+ 		<ul id="sample_profile" data-role="listview" class="mainmenu"></ul>
+      </div>
+</div>
+
+
+
+<div data-role="page" id="sample_edu_lists" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+	 <h2>Select Educator</h2> <br> 
+  		<ul id="sample_edu_list" data-role="listview" class="mainmenu">
+			<li><a href="#sample_edu_days"><img src="images/Staff_48.png" width="auto" height="auto"><h3>Mr. AB Educator</h3><p>View your school timetable</p></a></li>
+			<li><a href="#sample_edu_days"><img src="images/Staff_48.png" width="auto" height="auto"><h3>Mrs.CD Educators</h3><p>View your school timetable</p></a></li>
+		</ul>
+      </div>
+</div>
+
+
+<div data-role="page" id="sample_class_lists" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+	 <h2>Select a Class</h2> <br> 
+  		<ul id="sample_edu_list" data-role="listview" class="mainmenu">
+			<li><a href="#sample_class_days"><img src="images/Student_48.png" width="auto" height="auto"><h3>7A</h3><p>View your school timetable</p></a></li>
+			<li><a href="#sample_class_days"><img src="images/Student_48.png" width="auto" height="auto"><h3>7B</h3><p>View your school timetable</p></a></li>
+		</ul>
+      </div>
+</div>
+
+
+<div data-role="page" id="select_nu_profile" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+	 <h2>Select your profile</h2> <br> 
+  		<ul id="selectnu_profile" data-role="listview" class="mainmenu">
+			<li><a href="select_school.html?id=1"><img src="images/Staff_48.png" width="auto" height="auto"><h3>Educator</h3><p>Load your school timetable</p></a></li>
+			<li><a href="select_school.html?id=2"><img src="images/Student_48.png" width="auto" height="auto"><h3>Learner</h3><p>Load your school timetable</p></a></li>
+		</ul>
+      </div>
+</div>
+
+
+<div data-role="page" id="sample_edu_days" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+	 <h2>Select a Day of Week</h2>  <br>
+  		<ul id="sample_edu_day" data-role="listview" class="mainmenu">
+			<li><a href="sample_edu_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Monday</h3><p>Day 1</p></a></li>
+			<li><a href="sample_edu_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Tuesday</h3><p>Day 2</p></a></li>
+			<li><a href="sample_edu_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Wednesday</h3><p>Day 3</p></a></li>
+			<li><a href="sample_edu_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Thursday</h3><p>Day 4</p></a></li>
+			<li><a href="sample_edu_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Friday</h3><p>Day 5</p></a></li>
+		</ul>
+      </div>
+</div>
+
+
+<div data-role="page" id="sample_class_days" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+	 <h2>Select a Day of Week</h2>  <br>
+  		<ul id="sample_class_day" data-role="listview" class="mainmenu">
+			<li><a href="sample_clss_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Monday</h3><p>Day 1</p></a></li>
+			<li><a href="sample_clss_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Tuesday</h3><p>Day 2</p></a></li>
+			<li><a href="sample_clss_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Wednesday</h3><p>Day 3</p></a></li>
+			<li><a href="sample_clss_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Thursday</h3><p>Day 4</p></a></li>
+			<li><a href="sample_clss_tt.html"><img src="images/Calendar_48.png" width="auto" height="auto"><h3>Friday</h3><p>Day 5</p></a></li>
+		</ul>
+      </div>
+</div>
+
+<div data-role="page" id="attandance" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+	<div id="first_heading5" align="centre" class="bana">Attendance Register</div><br>
+	 <div data-role="fieldcontain">
+	 <label for="mark_register" class="select">Options:</label>
+	   <select name="mark_register" id="mark_register">
+	     <option value="1">Mark Register</option>
+	     <option value="2">Correct Register</option>
+      </select>
+	   <div data-role="fieldcontain">
+	    <label for="select_period" class="select">Period:</label>
+	     <select name="select_period" id="select_period">
+          <option value="0" selected>Select Period</option>
+	       <option value="1">Period 1</option>
+	       <option value="2">Period 2</option>
+	       <option value="3">Period 3</option>
+	       <option value="4">Period 4</option>
+	       <option value="5">Period 5</option>
+	       <option value="6">Period 6</option>
+	       <option value="7">Period 7</option>
+	       <option value="8">Period 8</option>
+	       <option value="9">Period 9</option>
+	       <option value="10">Period 10</option>
+	       <option value="11">Period 11</option>
+         </select>
+       </div>
+      
+      <ul id="period_select" data-role="listview" class="mainmenu"></ul> <br>
+    </div> 
+     
+   </div>
+</div>
+
+
+
+<div data-role="page" id="products" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+	<div id="first_heading15" align="centre" class="bana">Product Options</div><br>
+
+<div data-role="fieldcontain">
+	 <h2>Option 1</h2>  
+      <div class="cava"><div class="bana">Convert existing TT to mobile</div>
+	<div data-role="fieldcontain">
+	Convert existing TT to be viewed on any smart device <br>
+	* Educator TT <br>
+	* Learner/Class TT
+	</div>
+</div>
+</div> 
+
+<div data-role="fieldcontain">
+	 <h2>Option 2</h2>  
+      <div class="cava"><div class="bana">Request a new TT</div>
+	<div data-role="fieldcontain">
+	Create TT from Allocations/classification to be viewed on any smart device <br>
+	* Educator TT <br>
+	* Learner/Class TT
+	</div>
+</div>
+</div> 
+
+<div data-role="fieldcontain">
+	 <h2>Option 3</h2>  
+      <div class="cava"><div class="bana">Guardian Angel - Silver</div>
+	<div data-role="fieldcontain">
+	Create TT to be viewed on any smart device <br>
+	* Educator TT <br>
+	* Learner/Class TT<br>
+	Plus:<br>
+	Mark learner attendace register and track homeworks from any smart device <br>
+	*Report on attendance/late coming p/learner <br>
+	*Report on attendance/late coming p/learner p/learning area<br>
+	*Report on homework attitude p/learner <br>
+	*Report on homework attitude p/learner p/learning area<br>
+	</div>
+</div>
+</div> 
+
+<div data-role="fieldcontain">
+	 <h2>Option 4</h2>  
+      <div class="cava"><div class="bana">Guardian Angel - Gold</div>
+	<div data-role="fieldcontain">
+	Guardian Angel - Silver<br>
+	Plus:<br>
+	SMS is sent to parent/guardian whenever the learner is marked Absent or Late for school <br>
+	</div>
+</div>
+</div> 
+
+     <div class="bana">All options come with the following printable TTs:</div><br>
+	 * Composite School timetable <br>
+	 * Composite by Educators <br>
+	 * Composite by subjects <br>
+	 * Composite by grades <br>
+	 * Educator timetables <br>
+	 * Class/learner timetables <br>
+	 * Relief timetable <br>
+   </div>
+</div>
+
+<div data-role="page" id="sample_attend" data-add-back-btn="true">
+<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+	<div id="first_heading6" align="centre" class="bana">Attendance Register</div><br>
+	 <div data-role="fieldcontain">
+	 <label for="mark_register6" class="select">Options:</label>
+	   <select name="mark_register6" id="mark_register6">
+	     <option value="1">Mark Register</option>
+	     <option value="2">Correct Register</option>
+      </select>
+	   <div data-role="fieldcontain">
+	    <label for="select_period6" class="select">Period:</label>
+	     <select name="select_period6" id="select_period6">
+          <option value="0" selected>Select Period</option>
+	       <option value="1">Period 1</option>
+	       <option value="2">Period 2</option>
+	       <option value="3">Period 3</option>
+	       <option value="4">Period 4</option>
+	       <option value="5">Period 5</option>
+	       <option value="6">Period 6</option>
+	       <option value="7">Period 7</option>
+	       <option value="8">Period 8</option>
+	       <option value="9">Period 9</option>
+	       <option value="10">Period 10</option>
+	       <option value="11">Period 11</option>
+         </select>
+       </div>
+      
+      <ul id="period_select6" data-role="listview" class="mainmenu"></ul> <br>
+    </div> 
+     
+   </div>
+</div>
+
+	<div id="comments" data-role="page" data-theme="d" data-add-back-btn="true">
+	<div data-role="header" data-theme="d"><img src="images/nu_logo1.png" width="100%" height="auto"></div>
+<div data-role="content" class="footerSpace">
+<h2>Feedback</h2> <br>
+<div class="cava">Your Profile
+<div data-role="fieldcontain">
+  <select name="com_profile" id="com_profile">
+    <option value="0">Select Profile</option>
+    <option value="1">Educator</option>
+    <option value="2">Learner</option>
+    <option value="3">Administrator</option>
+    <option value="4">Parent/Guardian</option>
+  </select>
+</div>
+</div>
+
+<div class="cava">Cell No
+<div data-role="fieldcontain">
+    <input type="text" name="com_tel" id="com_tel" value=""  />
+</div>
+</div>
+
+<div class="cava">Comment or complain
+<div data-role="fieldcontain">
+   <textarea cols="40" rows="8" name="cm_details" id="cm_details"></textarea>
+</div>
+</div>
+
+
+<a href="#" id="nu_test_db4" data-role="button" class="ui-btn-left">Submit</a>
+			<a href="#page" id="cancel_cm" data-role="button" class="ui-btn-left">Cancel</a>
+		</div>
+		
+		
+			<div data-role="content" class="footerSpace">	
+    <div id="first_heading20" align="centre" class="bana">Contact Information</div><br>
+	
+
+
+
+<div class="cava">
+email: timetables@schoolessentials.co.za<br>
+fax: 0865518979<br>
+tel: 083 967 6664<br>
+</div>
+		<a href="tel://0839676664" data-role="button" id="sent_order" data-inline="false">Call Now</a>
+	</div>
+
+
+	</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="includes/service_url.js"></script>
+  <script src="includes/main_menu.js"></script>
+  
+  <script src="includes/sample_profiles.js"></script>
+  <script src="includes/calc.js"></script>
+  <script src="includes/school_code.js"></script>
+  <script src="includes/select_school.js"></script>
+   <script src="includes/select_profile.js"></script>
+   <script src="includes/select_educ.js"></script>
+   <script src="includes/select_class.js"></script>
+   <script src="includes/educ_tt_days.js"></script>  
+   <script src="includes/load_edu_table.js"></script>  
+   <script src="includes/nu_load_edu_table.js"></script>  
+   <script src="includes/class_tt_days.js"></script>  
+   <script src="includes/load_class_table.js"></script>  
+   <script src="includes/learner_table.js"></script>  
+    <script src="includes/edu_table.js"></script>  
+	 	<script src="includes/ga.js"></script>  
+		<script src="includes/sample_ga.js"></script>  
+		 <script src="includes/ga2.js"></script>  
+		  <script src="includes/ga3.js"></script>  
+		 <script src="includes/attandance.js"></script>  
+		  <script src="includes/sample_attend.js"></script>  
+	<script src="includes/home_work.js"></script>  
+	<script src="includes/comments.js"></script>  
+ 
+</body>
+</html>

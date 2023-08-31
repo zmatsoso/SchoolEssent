@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>School Essentials | Contacts</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="../css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
+<script type="text/javascript" src="../js/jquery-1.5.2.js" ></script>
+<script type="text/javascript" src="../js/cufon-yui.js"></script>
+<script type="text/javascript" src="../js/cufon-replace.js"></script>
+<script type="text/javascript" src="../js/Molengo_400.font.js"></script>
+<script type="text/javascript" src="../js/Expletus_Sans_400.font.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../js/html5.js"></script>
+<style type="text/css">.bg, .box2{behavior:url("../js/PIE.htc");}</style>
+<![endif]-->
+<script>
+function resertform(){
+document.getElementById("name").value = "";
+document.getElementById("email").value = "";
+document.getElementById("maSubject").value = "General Information";
+document.getElementById("matext").value = "";
+return false;
+}
+function sendinfo(){
+	var maname = document.getElementById("name").value;
+	var maemail = document.getElementById("email").value;
+	var msg = document.getElementById("matext").value;
+	
+	if(maname==""){
+		document.getElementById("errors").innerHTML="Please type your name and try again!";
+	}else{
+			if(maemail==""){
+			document.getElementById("errors").innerHTML="Please type your email and try again!";
+			}else{
+						if(msg==""){
+						document.getElementById("errors").innerHTML="Please type a short message and try again!";
+						}else{
+								var pattern=/^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+    							if(pattern.test(maemail)){         
+								allright();   
+    							}else{   
+										document.getElementById("errors").innerHTML="Please supply a valid email and try again!";
+    								}
+
+							
+							}
+				
+				}
+		}
+
+}
+
+function allright(){
+ name = document.getElementById("name").value;
+ email = document.getElementById("email").value;
+ subject = document.getElementById("maSubject").value;
+ msg1 = document.getElementById("matext").value;
+ msg = msg1 + " :" + name;
+ 
+	var url = 'emailsent.php?name='
+	+ name
+	+ '&email='
+	+ email
+	+ '&subject='
+	+ subject
+	+ '&msg='
+	+ msg
+	+ '&msg1='
+	+ msg1
+
+	window.open(url, '_self');
+}
+</script>
+</head>
+<body id="page5">
+<div class="body1">
+  <div class="main">
+    <!-- header -->
+    <header>
+      <div class="wrapper">
+        <nav>
+          <ul id="menu">
+            <li><a href="desk.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="pricing.php">Pricing</a></li>
+            <li><a href="clientzone.php">ClientZone</a></li>
+            <li class="end"><a href="contacts.html">Contacts</a></li>
+         </ul>
+        </nav>
+        <ul id="icons">
+          <li><a href="#"><img src="../images/icons1.jpg" alt=""></a></li>
+          <li><a href="#"><img src="../images/icons2.jpg" alt=""></a></li>
+        </ul>
+      </div>
+      <div class="wrapper">
+        <h1><a href="desk.html" id="logo">Learn Center</a></h1>
+      </div>
+      <div id="slogan">Contuct<span>us</span> </div>
+    </header>
+    <!-- / header -->
+  </div>
+</div>
+<div class="body2">
+  <div class="main">
+    <!-- content -->
+    <section id="content">
+      <div class="box1">
+        <div class="wrapper">
+          <article class="col1">
+            <div class="pad_left1">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><h2>Contact Form</h2></td><td id="errors"></td>
+  </tr>
+</table>
+
+              
+              <form id="ContactForm" action="#">
+                <div>
+                  <div  class="wrapper"> <strong>Name:</strong>
+                    <div class="bg">
+                      <input type="text" class="input" id="name">
+                    </div>
+                  </div>
+                  <div  class="wrapper"> <strong>Email:</strong>
+                    <div class="bg">
+                      <input type="text" class="input" id="email">
+                    </div>
+                  </div>
+                   <div  class="wrapper"> <strong>Subject:</strong>
+                    <div class="bg">
+                      <input type="text" class="input" id="maSubject" placeholder="General Information">
+                    </div>
+                  </div>
+                 <div  class="textarea_box"> <strong>Message:</strong>
+                    <div class="bg">
+                      <textarea name="textarea" cols="1" rows="1" id="matext"></textarea>
+                    </div>
+                  </div>
+                  <a href="#" class="button" onClick="sendinfo()"><span><span>Send</span></span></a> <a href="#" class="button" onClick="resertform()"><span><span>Clear</span></span></a> </div>
+              </form>
+            </div>
+                </article>
+          <article class="col2 pad_left2">
+            <div class="pad_left1">
+              <h2>Miscellaneous <span>Info</span></h2>
+              <p>School Esssentials works with leading brands to devise and create innovative procument and communication concepts.<br/><br/> We are digital and social by nature, but we focus on the idea before the medium.</p>
+              <p>Fax: <strong>086 551 6048</strong></p>
+              <p>Email: <strong>clientcare@schoolessentials.co.za</strong><br/> 
+                <br/> <br/> <br/> 
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <!-- content -->
+    <!-- footer -->
+    <footer>
+      <div class="wrapper">
+        <div class="pad1">
+          <div class="pad_left1">
+            <div class="wrapper">
+            </div>
+            <div class="wrapper">
+               <article class="col_4 pad_left2">Copyright &copy; <a href="#">SchoolEssentials.co.za</a> All Rights Reserved<br>
+                </article>
+             </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- / footer -->
+  </div>
+</div>
+<script type="text/javascript">Cufon.now();</script>
+<div align=center>This website was Created by <a href="about.html">Zipho Matsoso</a></div></body>
+</html>

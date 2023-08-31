@@ -1,0 +1,14 @@
+Create a folder called SchoolEssent on your C: drive
+
+Copy all the files into the folder
+
+Open Clarion IDE and open school_ess.app and compile it...
+
+Username: Monty
+Password: Monty
+
+Open the App and go to settings > database settings > follow the directions to create the database based on your prefered database engine and click connect
+
+You will need Clarion 6 compiler and Clarion 6.1 patch.
+
+Enjoy the App!!!

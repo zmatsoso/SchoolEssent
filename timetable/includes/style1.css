@@ -1,0 +1,897 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+#page, #school_main, #sample_profiles, #sample_edu_lists, #sample_class_lists, #sample_edu_days, #sample_class_days, #prompt_questions, #prompt_questions1, #selectschool, #select_profile_page, #select_educ_page, #select_class_page, #educ_timetable_days, #class_timetable_days, #load_edu_table, #load_class_table, #page2, #ga, #attandance, #ga2, #ga3, #sample_attend, #sample_ga, #advanceddemo, #comments, #calc, #products, #select_nu_profile{
+	background:#FFF;
+	background-position:right;	
+}
+.body{
+	background:#000;
+}
+.heading{
+	display: none;
+}
+.myHeader{
+	background-color:#FFF;
+}
+.header{
+	width: 100%;
+	height: 234px;
+	margin: 0;
+	padding: 0;
+}
+
+h2{
+	text-align: center ;
+	margin:auto;
+	color:#06F;
+
+}
+h4{
+	margin:auto;
+	color:#0C3;
+
+}
+#page .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#page .mainmenu li {
+	background:none;
+	border:none;
+}
+#page .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#page .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#page .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* School Main*/
+#school_main .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#school_main .mainmenu li {
+	background:none;
+	border:none;
+}
+#school_main .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#school_main .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#school_main .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+/* Sample Profiles*/
+#sample_profiles .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#sample_profiles .mainmenu li {
+	background:none;
+	border:none;
+}
+#sample_profiles .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#sample_profiles .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#sample_profiles .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* sample_edu_lists*/
+#sample_edu_lists .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#sample_edu_lists .mainmenu li {
+	background:none;
+	border:none;
+}
+#sample_edu_lists .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#sample_edu_lists .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#sample_edu_lists .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* sample_class_lists*/
+#sample_class_lists .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#sample_class_lists .mainmenu li {
+	background:none;
+	border:none;
+}
+#sample_class_lists .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#sample_class_lists .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#sample_class_lists .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* sample_edu_days*/
+#sample_edu_days .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#sample_edu_days .mainmenu li {
+	background:none;
+	border:none;
+}
+#sample_edu_days .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#sample_edu_days .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#sample_edu_days .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+/* edu_tt*/
+#edu_tt .myheading{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+h2{
+	text-align: center ;
+	margin:auto;
+	color:#06F;
+
+}
+h4{
+	margin:auto;
+	color:#0C3;
+
+}
+.nako{
+	color:#FF0;
+}
+.mola {
+	font-size: 12px;
+	color: #FF0;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #FFC;
+}
+.molahodimo {
+	font-size: 12px;
+	color: #FF0;
+	border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #FF9;
+}
+.ga_mgs {
+	font-size: 14px;
+	color: #06F;
+}
+.diperiod {
+	font-size: 14px;
+	color: #0C3;
+}
+.bana {
+	font-size: 16px;
+	color: #06F;
+	font-weight: bold;
+	text-align: center ;
+}
+.caonta {
+	font-size: 10px;
+	color: #000;
+	font-weight: lighter;
+	text-align: right;
+}
+.cava {
+	background: rgba(125,225,255,.6);
+	border-radius: 10px;
+	padding:10px;
+	margin: 5px;
+}
+
+
+/* sample_class_days*/
+#sample_class_days .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#sample_class_days .mainmenu li {
+	background:none;
+	border:none;
+}
+#sample_class_days .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#sample_class_days .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#sample_class_days .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* prompt_questions*/
+#prompt_questions .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#prompt_questions .mainmenu li {
+	background:none;
+	border:none;
+}
+#prompt_questions .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#prompt_questions .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#prompt_questions .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+/* prompt_questions1*/
+#prompt_questions1 .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#prompt_questions1 .mainmenu li {
+	background:none;
+	border:none;
+}
+#prompt_questions1 .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#prompt_questions1 .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#prompt_questions1 .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+
+
+/* select_profile_page*/
+#select_profile_page .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#select_profile_page .mainmenu li {
+	background:none;
+	border:none;
+}
+#select_profile_page .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#select_profile_page .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#select_profile_page .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* selectschool*/
+#selectschool .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#selectschool .mainmenu li {
+	background:none;
+	border:none;
+}
+#selectschool .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#selectschool .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#selectschool .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* select_educ_page*/
+#select_educ_page .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#select_educ_page .mainmenu li {
+	background:none;
+	border:none;
+}
+#select_educ_page .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#select_educ_page .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#select_educ_page .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* select_class_page*/
+#select_class_page .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#select_class_page .mainmenu li {
+	background:none;
+	border:none;
+}
+#select_class_page .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#select_class_page .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#select_class_page .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* educ_timetable_days*/
+#educ_timetable_days .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#educ_timetable_days .mainmenu li {
+	background:none;
+	border:none;
+}
+#educ_timetable_days .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#educ_timetable_days .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#educ_timetable_days .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* class_timetable_days*/
+#class_timetable_days .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#class_timetable_days .mainmenu li {
+	background:none;
+	border:none;
+}
+#class_timetable_days .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#class_timetable_days .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#class_timetable_days .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* load_edu_table*/
+#load_edu_table .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#load_edu_table .mainmenu li {
+	background:none;
+	border:none;
+}
+#load_edu_table .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#load_edu_table .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#load_edu_table .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+/* load_class_table*/
+#load_class_table .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#load_class_table .mainmenu li {
+	background:none;
+	border:none;
+}
+#load_class_table .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#load_class_table .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#load_class_table .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* page2*/
+#page2 .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#page2 .mainmenu li {
+	background:none;
+	border:none;
+}
+#page2 .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#page2 .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#page2 .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+/* ga*/
+#ga .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#ga .mainmenu li {
+	background:none;
+	border:none;
+}
+#ga .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#ga .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#ga .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+/* ga2*/
+#ga2 .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#ga2 .mainmenu li {
+	background:none;
+	border:none;
+}
+#ga2 .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#ga2 .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#ga2 .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* ga3*/
+#ga3 .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#ga3 .mainmenu li {
+	background:none;
+	border:none;
+}
+#ga3 .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#ga3 .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#ga3 .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+/* attandance*/
+#attandance .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#attandance .mainmenu li {
+	background:none;
+	border:none;
+}
+#attandance .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#attandance .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#attandance .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+/* sample_attend*/
+#sample_attend .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#sample_attend .mainmenu li {
+	background:none;
+	border:none;
+}
+#sample_attend .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#sample_attend .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#sample_attend .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* sample_ga*/
+#sample_ga .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#sample_ga .mainmenu li {
+	background:none;
+	border:none;
+}
+#sample_ga .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#sample_ga .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#sample_ga .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* advanceddemo*/
+#advanceddemo .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#advanceddemo .mainmenu li {
+	background:none;
+	border:none;
+}
+#advanceddemo .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#advanceddemo .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#advanceddemo .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* comments*/
+#comments .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#comments .mainmenu li {
+	background:none;
+	border:none;
+}
+#comments .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#comments .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#comments .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* calc*/
+#calc .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#calc .mainmenu li {
+	background:none;
+	border:none;
+}
+#calc .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#calc .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#calc .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+/* products*/
+#products .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#products .mainmenu li {
+	background:none;
+	border:none;
+}
+#products .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#products .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#products .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+
+/* select_nu_profile*/
+#select_nu_profile .mainmenu{
+	margin: 5px;
+	padding: 0;
+}
+#select_nu_profile .mainmenu li {
+	background:none;
+	border:none;
+}
+#select_nu_profile .mainmenu li a{
+	background: rgba(125,225,255,.6);
+	display:block;
+	border-radius: 10px;
+	margin-bottom: 5px;
+}
+#select_nu_profile .mainmenu li a:hover{
+	background:rgba(125,225,255,.9);
+	display:block;
+}
+#select_nu_profile .footerSpace{
+	background: rgba(205,225,255,.6);
+	border-radius:5px;
+	margin:10px;
+	padding:10px;
+}
+
+select {
+    width: 20%; /* Set width. Do not set height else it will fail in IE8-10. Use padding for height. */
+    color: #333;
+    font-weight: normal;
+    font-size: 1em;
+    line-height:1.2em;
+    margin: 0 0 10px;
+    padding: 6px 0; /* use this to set a specific height for your dropdown (DO NOT use the attribute 'height') */
+    border: 0 none;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: "";
+   background: url('images/arrow.png') no-repeat 100% 4px #fff; /* add your own arrow image */
+    *background-image:none; /* turn bg image for IE7 */
+    background: url('images/arrow.png') no-repeat 100% 0px #fff; /* fallback bg image*/
+    background: url('images/arrow.png') no-repeat 100% 0px, -webkit-linear-gradient(top, #fff, #9c9c9c);
+    background: url('images/arrow.png') no-repeat 100% 0px, -moz-linear-gradient(top, #fff, #9c9c9c);
+    background: url('images/arrow.png') no-repeat 100% 0px, -ms-linear-gradient(top, #fff, #9c9c9c);
+    background: url('images/arrow.png') no-repeat 100% 0px, -o-linear-gradient(top, #fff, #9c9c9c);
+    background: url('images/arrow.png') no-repeat 100% 0px, linear-gradient(top, #fff, #9c9c9c);
+    -webkit-appearance: none; /* gets rid of default appearance in Webkit browsers*/
+    -moz-appearance: none; /* Get rid of default appearance for older Firefox browsers */
+    -ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+    appearance: none;
+}
+select option {
+    background: #fff; /* style the dropdown bg color */
+}

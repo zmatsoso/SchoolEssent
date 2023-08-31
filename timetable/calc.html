@@ -1,0 +1,224 @@
+
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<!--[if lt IE 7]> <html lang="en-us" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en-us" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en-us" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-us" class="no-js"> <!--<![endif]-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
+<title>Mobile Website Pricing Calculator</title>
+<link href="css/h5bp.css" rel="stylesheet" />
+<link href="css/calculator.css" rel="stylesheet" />
+
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<div id="ui-container">
+<h3 align="center">Mobile Website Costing Calculator </h3>
+<form id="jquery-order-form" class="jof" action="includes/process.php" method="post">
+  <div class="option o-1">
+    <h4>Select Business Type</h4>
+    <p>Please select your type of business:</p>
+    <fieldset>
+      <!--<p>
+        <label>
+          <input type="radio" id="general" value="325" name="business" required />
+          General Business</label>
+      </p>-->
+      <p>
+        <label>
+          <input type="radio" id="autorepair" value="Auto Repair Shops" name="business" required required/>
+          Auto Repair Shops</label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" id="bar" value="Bars and Nightclubs" name="business" required="required" />
+          Bars and Nightclubs</label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" id="chiropractors" value="Chiropractors" name="business" required="required" />
+          Chiropractors</label>
+      </p>
+      <p>
+        <label>
+          <input type="radio" id="dentists" value="Dentists" name="business" required="required" />
+          Dentists</label>
+      </p>
+     </fieldset>
+  </div>
+  <div class="option o-3">
+    <h4>How many locations does your business have?</h4>
+    <p>Select the number of locations that your business woud like listed </p>
+    <fieldset>
+      <p>&nbsp;      </p>
+      <div id="slider"></div></p><br />
+       <span id="location">1</span>
+        <span  style="display:none;"><input type="number" hidden="true" name="locations" id="locations" value="0"/></span>
+        <span class="staticPrice"><span class="hypen"> - </span>Number of Locations (including Tap-to-Call and Tap-to-Map)</span></p>
+      <p><em>GPS Location Module available upon request.</em></p>
+    </fieldset>
+  </div>
+  <div class="option o-4">
+    <h4>Modules at Setup</h4>
+    <p>Here you can choose the number of modules for your mobile website.</p>
+    <fieldset id="modules">
+   
+      <p>
+      Events:
+     	<span style="position: relative;left: 124px;">
+        <button class="ui-state-default buttonup mozfix" id="eventup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="events" id="events" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="eventdown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span></p>
+      <p>
+      Generic Content Pages:
+      <span style="position: relative;left: 28px;">
+      <button class="ui-state-default buttonup mozfix" id="genericcontentup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="genericcontent" id="genericcontent" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="genericcontentdown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span></p>
+      <p>Menus:
+      <span style="position: relative;left: 124px;">
+        <button class="ui-state-default buttonup mozfix" id="menusup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="menus" id="menus" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="menusdown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span></p>
+      <p>Photo Album:
+      <span style="position: relative;left: 88px;">
+
+       <button class="ui-state-default buttonup mozfix" id="photoalbumup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="photoalbum" id="photoalbum" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="photoalbumdown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span></p>
+      <p>External Link:
+            <span style="position: relative;left: 87px;">
+
+        <button class="ui-state-default buttonup mozfix" id="extlnkup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="extlnk" id="extlnk" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="extlnkdown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span></p>
+        
+      <p>Offers/Promotions:
+            <span style="position: relative;left: 59px;">
+        <button class="ui-state-default buttonup mozfix" id="offersup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="offers" id="offers" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="offersdown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span> </p>
+      <p>Reviews:
+                  <span style="position: relative;left: 116px;">
+
+        <button class="ui-state-default buttonup mozfix" id="reviewsup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="reviews" id="reviews" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="reviewsdown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span> </p>
+      <p>YouTube Video:
+                  <span style="position: relative;left: 76px;">
+
+         <button class="ui-state-default buttonup mozfix" id="utubevdoup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="utubevdo" id="utubevdo" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="utubevdodown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span> </p>
+      <p>RSS Feed:
+                  <span style="position: relative;left: 103px;">
+
+        <button class="ui-state-default buttonup mozfix" id="rssup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="rss" id="rss" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="rssdown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span> </p>
+      <p>Social media footer links:
+                  <span style="position: relative;left: 21px;">
+
+       <button class="ui-state-default buttonup mozfix" id="smup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="sm" id="sm" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="smdown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span> </p>
+      <p>Opentable:
+                  <span style="position: relative;left: 104px;">
+
+       <button class="ui-state-default buttonup mozfix" id="opentableup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="opentable" id="opentable" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="opentabledown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span> </p>
+      <p>Mobile Lead Capture Form:
+                  <span style="position: relative;left: 10px;">
+
+        <button class="ui-state-default buttonup mozfix" id="mobileleadup" type="button"><span class="ui-icon ui-icon-triangle-1-n"></span></button>
+        <input type="text" value="0" name="mobilelead" id="mobilelead" class="infield" />
+        <button style="margin-left:-5px" class="ui-state-default buttondown mozfix" id="mobileleaddown" type="button"><span class="ui-icon ui-icon-triangle-1-s"></span></button></span>
+      </p>
+      <br />
+  </fieldset>
+  </div>
+  
+  
+  
+    <div class="option o-3">
+    <h4>How many changes per month?</h4>
+    <p>Select the number of changes per month </p>
+    <fieldset>
+      <p>&nbsp;      </p>
+      <div id="slider2"></div></p><br />
+       <span id="changespermonth">0</span>
+       <span  style="display:none;">
+       <input type="number" hidden="true" name="changespermonth" id="changespermonthvalue" value="0"/></span>
+        <span class="staticPrice"><span class="hypen"> - </span>Number of changes per month</span></p>
+
+</fieldset>
+  </div>
+  
+  <div class="option o-2">
+    <h4>QR Codes</h4>
+    <p>Will the client want QR codes generated and printed in various locations?</p>
+    <fieldset>
+      <p>
+        <label>
+          <input type="checkbox" id="qrsetup"  name="qrsetup" value="QR Code Setup"/>
+          QR Code Setup</label>
+      </p>
+      
+      <p>
+        <label>
+          <input type="checkbox" id="winplaque"  name="winplaque" value="Front Window Plaque"/>
+          Front Window Plaque</label>
+      </p>
+      
+      <p>
+        <label>
+          <input type="checkbox" id="qrprint"   name="qrprint" value="QR Code for Print (JPEG/PNG)"/>
+          QR Code for Print (JPEG/PNG) </label>
+  </p>
+</fieldset>
+  </div>
+  <div class="option o-5">
+    <h4>Reports</h4>
+    <p>Do you want to receive traffic and analytics reports?</p>
+    <fieldset id="reportsfields">
+      
+      <p>
+        <select id="reports" name="reports">
+          <option >No Reports</option>
+          <option ">Yes - Monthly</option>
+          <option >Yes - Weekly</option>
+        </select>
+      </p>
+    </fieldset>
+   
+</div>
+  <fieldset style="display:none;">        
+    <input type="number" hidden="true" name="setmsrp" id="setmsrpvalue" value="0"/>
+
+       <input type="number" hidden="true" name="monmsrp" id="monmsrpvalue" value="0"/>
+
+       <input type="number" hidden="true" name="estcost" id="estcostvalue" value="0"/>
+
+       <input type="number" hidden="true" name="yearlyprofit" id="yearlyprofitvalue" value="0"/>
+  </fieldset>
+  <fieldset id="info">
+      </fieldset>
+</form>
+<center>
+  <p style="font-size:140%"><strong>Estimated Mobile Website Cost</strong></p>
+                             <br /><p style="font-size: 125%"><strong>Initial Setup Fee: </strong></p>
+          <p style="font-size: 280%"><span style="color:#ff9900"><strong>R<span id="setmsrp">0.00</span></strong></span></p>
+                     <br /> <p style="font-size: 125%"><strong>Monthly Maintenance Fee: </strong></p>
+  <p style="font-size: 280%"><span style="color:#ff9900"><strong>R<span id="monmsrp">0.00</span></strong><span id="monmsrp"></span></span></p>
+<br /> </center> <h1 align="center" style="font-size:250%;"><strong>Go Mobile Today!</strong>
+</h1>
+</div>
+  
+</p>
+</body>
+</html>
